@@ -84,3 +84,26 @@ mostrarProduto({
     preco: 2500,
     teclado: false
 })
+
+
+//Arrays
+
+const numero = [10, 20, 40, 50, 3];
+
+function maiorQue10(data:number[]){
+    return data.filter((n)=> n > 10)
+
+
+}
+
+console.log(maiorQue10(numero));
+
+
+const taxas = ['taxa', 20, 'taxa', 50, 3];
+
+function filtrarValor(data: (string | number)[]){
+
+        return data.filter(itemD => typeof itemD === "number")
+}
+
+console.log(filtrarValor(taxas))
