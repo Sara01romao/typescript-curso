@@ -37,3 +37,25 @@ function notNull <Variavel>(arg: Variavel){
 
 notNull("Andre")?.toLocaleLowerCase();
 notNull(200)?.toFixed();
+
+
+//AS : indica o tipo do elemento
+
+const video = document.querySelector('#video') as HTMLVideoElement;
+
+video.volume
+
+
+//Destructring : indica o tipo do elemento
+
+const {body} : {body: HTMLElement} = document;
+
+//...res
+
+function comparar(tipo:string, ...numeros:number[]){
+    if(tipo === "menor"){
+        return Math.min(...numeros);
+    }
+}
+
+console.log(comparar("menor", 2,3,0,1));
