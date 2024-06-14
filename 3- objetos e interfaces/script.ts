@@ -25,3 +25,15 @@ lista.forEach((link)=>{
      
    }
 })
+
+//Generic
+
+function notNull <Variavel>(arg: Variavel){
+
+    if(arg !== null) return arg;
+    else return null;
+}
+
+
+notNull("Andre")?.toLocaleLowerCase();
+notNull(200)?.toFixed();
