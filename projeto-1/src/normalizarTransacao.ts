@@ -21,7 +21,7 @@ export interface TransacaoAPI{
 interface Transacao{
     nome:string;
     id:number;
-    data:string;
+    data:Date;
     status:TransacoesStatus;
     email: string;
     moeda: string;
@@ -34,7 +34,7 @@ interface Transacao{
 
 
 
-export default function normalizarTransacao(transacao:TransacaoAPI){
+export default function normalizarTransacao(transacao:TransacaoAPI):Transacao{
 
     return{
         nome:transacao.Nome,
