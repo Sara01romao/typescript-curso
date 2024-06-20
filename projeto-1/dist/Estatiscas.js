@@ -32,11 +32,11 @@ export default class Estatiscas {
     setSemana() {
         const semana = {
             ['Domingo']: 0,
-            ['Segunda']: 0,
-            ['Terça']: 0,
-            ['Quarta']: 0,
-            ['Quinta']: 0,
-            ['Sexta']: 0,
+            ['Segunda-Feira']: 0,
+            ['Terça-Feira']: 0,
+            ['Quarta-Feira']: 0,
+            ['Quinta-Feira']: 0,
+            ['Sexta-Feira']: 0,
             ['Sábado']: 0
         };
         for (let i = 0; i < this.transacoes.length; i++) {
@@ -44,15 +44,15 @@ export default class Estatiscas {
             if (day === 0)
                 semana['Domingo'] += 1;
             if (day === 1)
-                semana['Segunda'] += 1;
+                semana['Segunda-Feira'] += 1;
             if (day === 1)
-                semana['Terça'] += 1;
+                semana['Terça-Feira'] += 1;
             if (day === 2)
-                semana['Quarta'] += 1;
+                semana['Quarta-Feira'] += 1;
             if (day === 2)
-                semana['Quinta'] += 1;
+                semana['Quinta-Feira'] += 1;
             if (day === 2)
-                semana['Sexta'] += 1;
+                semana['Sexta-Feira'] += 1;
             if (day === 2)
                 semana['Sábado'] += 1;
         }
