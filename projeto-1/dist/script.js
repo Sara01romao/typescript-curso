@@ -13,16 +13,14 @@ function preecherLista(lista, containerId) {
     const containerElement = document.getElementById(containerId);
     if (containerElement) {
         Object.keys(lista).forEach((key) => {
-            containerElement.innerHTML += `<p>${key}: ${lista[key]} </p>`;
+            containerElement.innerHTML += `<p>${key}: <span>${lista[key]} </span></p>`;
         });
     }
 }
 function preecherEstatisticas(transacoes) {
     const data = new Estatiscas(transacoes);
-    console.log(data);
     preecherLista(data.pagamento, 'pagamento');
     preecherLista(data.status, 'status');
-    console.log(data);
     const totalElement = document.querySelector("#total span");
     if (totalElement) {
         totalElement.innerHTML = data.total.toLocaleString("pt-BR", {

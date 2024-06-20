@@ -138,16 +138,26 @@ main{
     color: #fff;
 }
 
-.card-estatistica span{
-    font-size: 28px;
-}
-
 .card-estatistica-head{
     display: flex;
     justify-content: space-between;
     margin-bottom: 22px;
     align-items: center;
 
+}
+
+.card-estatistica span{
+    font-size: 28px;
+   
+}
+
+#pagamento span, #status span{
+    color: #1480EB;
+    font-size: 20px;
+}
+
+#dia span{
+    color: #1480EB;
 }
 
 
