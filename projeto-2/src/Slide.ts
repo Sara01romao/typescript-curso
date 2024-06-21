@@ -21,6 +21,8 @@ export default class Slide{
         this.slide = this.slides[this.index];
 
         this.index=0;
+
+        this.init();
     }
 
     hide(el:Element){
@@ -32,6 +34,40 @@ export default class Slide{
         this.slide = this.slides[this.index];
         this.slides.forEach((el) => this.hide(el));
         this.slide.classList.add("active")
+    }
+    
+    prev(){
+        const prev = this.index > 0 ? this.index - 1 : this.slides.length - 1;
+        this.show(prev)
+    }
+
+    next(){
+       
+
+        const next = this.index + 1 < this.slides.length ? this.index + 1 : 0;
+        this.show(next)
+    }
+
+    private addControls(){
+       const prevButton = document.createElement("button");
+       const nextButton = document.createElement("button");
+
+       prevButton.innerText = "Slide Anterior";
+       nextButton.innerHTML = "Próximo Slide";
+
+       this.constrols.appendChild(prevButton);
+       this.constrols.appendChild(nextButton);
+
+       prevButton.addEventListener("pointerup", () => this.prev());
+       nextButton.addEventListener("pointerup", () => this.next());
+    
+
+    }
+
+    private init (){
+        this.addControls();
+        this.show(this.index);
+
     }
 
     
